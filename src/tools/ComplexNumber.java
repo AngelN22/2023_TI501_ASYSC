@@ -75,5 +75,14 @@ public class ComplexNumber {
         return (float) Math.atan2(z.b, z.a);
     }
     
-    
+    public ComplexNumber toN(int n){
+        float m = mod();
+        float angle = angle();
+        
+        return new ComplexNumber(
+                (float) (Math.pow(m, n) * Math.cos(angle)),
+                (float) (Math.pow(m, n) * Math.sin(angle))
+        );
+        
+    }
 }
