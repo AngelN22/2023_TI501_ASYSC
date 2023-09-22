@@ -1,7 +1,8 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+|   Clave: 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
+ */ 
 package tools;
 
 /**
@@ -77,7 +78,7 @@ public class ComplexNumber {
     
     public ComplexNumber toN(int n){
         float m = mod();
-        float angle = angle();
+        float angle = angle() * n;
         
         return new ComplexNumber(
                 (float) (Math.pow(m, n) * Math.cos(angle)),
@@ -85,4 +86,10 @@ public class ComplexNumber {
         );
         
     }
+
+    @Override
+    public String toString() {
+        return "ComplexNumber{" + "a=" + a + ", b=" + b + '}';
+    }
+    
 }
